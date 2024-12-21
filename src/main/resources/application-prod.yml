@@ -3,6 +3,14 @@
 # @from <a href="https://xiaobo.icu">编程导航知识星球</a>
 server:
   port: 8101
+  servlet:
+    session:
+      cookie:
+        #cookie 30 天过期
+        max-age: 2592000
+        #解决跨域问题 https
+        same-site: none
+        secure: true
 spring:
   # 数据库配置
   # todo 需替换配置
