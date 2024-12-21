@@ -65,14 +65,15 @@ spring:
       # 大小限制
       max-file-size: 10MB
 server:
-  address: 0.0.0.0
   port: 8101
   servlet:
-    context-path: /api
-    # cookie 30 天过期
     session:
       cookie:
+        #cookie 30 天过期
         max-age: 2592000
+        #解决跨域问题 https
+        same-site: none
+        secure: true
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false
