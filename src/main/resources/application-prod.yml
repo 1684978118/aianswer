@@ -3,7 +3,7 @@ spring:
     name: aianswer-backend
   # 默认 dev 环境
   profiles:
-    active: dev
+    active: prod
   # 支持 swagger3
   mvc:
     pathmatch:
@@ -62,7 +62,6 @@ spring:
                 sharding-algorithm-name: answer-table-inline
 
 
-
   # 文件上传
   servlet:
     multipart:
@@ -87,14 +86,7 @@ mybatis-plus:
       logic-delete-value: 1 # 逻辑已删除值（默认为 1）
       logic-not-delete-value: 0 # 逻辑未删除值（默认为 0）
 
-# 对象存储
-# todo 需替换配置
-cos:
-  client:
-    accessKey: xxx
-    secretKey: xxx
-    region: xxx
-    bucket: xxx
+
 # 接口文档配置
 knife4j:
   enable: true
